@@ -1,27 +1,32 @@
 <template>
   <div class="hello">
-    <!--<h2>Essential Links</h2>-->
-    <!--<ul>-->
-      <!--<li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>-->
-      <!--<li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>-->
-      <!--<li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>-->
-      <!--<li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>-->
-      <!--<br>-->
-      <!--<li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>-->
-    <!--</ul>-->
-    <!--<h2>Ecosystem</h2>-->
-    <!--<ul>-->
-      <!--<li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>-->
-      <!--<li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>-->
-      <!--<li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>-->
-      <!--<li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>-->
-    <!--</ul>-->
-    <!--<router-link to="Foo">go to Foo</router-link>-->
-    <div class="clearfix">
-      <router-view class="view one" ></router-view>
-      <router-view class="view two" name="two"></router-view>
-      <router-view class="view three" name="three"></router-view>
+    <div class="one">
+      <span class="fl">{{msg}}</span>
+      <span class="fr">+</span>
+      <span class="fr">@</span>
     </div>
+
+    <div class="two">
+      <div>{{ $route.params.id }}</div>
+      <el-button>默认按钮</el-button>
+      <el-button type="primary" @click="visible = true">主要按钮</el-button>
+      <el-button type="text">文字按钮</el-button>
+      <el-dialog v-model="visible" title="Hello world">
+        <p>欢迎使用 Element</p>
+      </el-dialog>
+      <!--<router-view class="view one" ></router-view>-->
+      <router-view class="view two"></router-view>
+      <!--<router-view class="view three" name="three"></router-view>-->
+    </div>
+
+    <my-component></my-component>
+
+    <ul class="three">
+      <router-link to="/weixin" tag="li">微信</router-link>
+      <router-link to="/tongxun" tag="li">通讯录</router-link>
+      <router-link to="/faxian" tag="li">发现</router-link>
+      <router-link to="/me" tag="li">我</router-link>
+    </ul>
 
   </div>
 </template>
@@ -31,7 +36,8 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'wechat',
+      visible: false
     }
   }
 }
@@ -39,6 +45,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  span{
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 20px;
+  }
+  .fl{
+    float: left;
+  }
+  .fr{
+    float: right;
+  }
  .one{
    width:100%;
    height: 44px;
@@ -54,7 +71,7 @@ export default {
    /*float: left;*/
    /*color: #fff;*/
    position: fixed;
-   top: 44px;
+   top: 60px;
  }
  .three{
    width: 100%;
@@ -76,17 +93,30 @@ h1, h2 {
   font-weight: normal;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+/*ul {*/
+  /*list-style-type: none;*/
+  /*padding: 0;*/
+/*}*/
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+/*li {*/
+  /*display: inline-block;*/
+  /*margin: 0 10px;*/
+/*}*/
 
 a {
   color: #42b983;
 }
+
+  ul{
+    list-style: none;
+    height:100%;
+    width:100%;
+    border-top:1px solid #666;
+  }
+  ul li{
+    width:25%;
+    height: 100%;
+    float: left;
+    line-height:50px;
+  }
 </style>

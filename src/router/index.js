@@ -3,9 +3,10 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Foo from '@/components/Foo'
 
-import One from '@/components/one'
-import Two from '@/components/two'
-import Three from '@/components/three'
+import User from '@/components/user'
+// import One from '@/components/one'
+// import Two from '@/components/two'
+// import Three from '@/components/three'
 
 import Wechat from '@/components/Wechat'
 
@@ -19,12 +20,8 @@ export default new Router({
       name: 'Hello',
       component: Hello,
       children: [{
-        path: '',
-        components: {
-          default: One,
-          two: Two,
-          three: Three
-        }
+        path: '/:id',
+        component: User
       }]
     },
     {

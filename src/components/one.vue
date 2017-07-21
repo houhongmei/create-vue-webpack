@@ -4,6 +4,7 @@
     <span class="fr">+</span>
     <span class="fr">@</span>
   </div>
+
 </template>
 <script>
   export default {
