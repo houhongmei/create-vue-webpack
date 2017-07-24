@@ -1,3 +1,12 @@
 <template>
-  <div>aaaaa</div>
+  <h1>{{msg}}</h1>
 </template>
+<script>
+  export default{
+    data () {
+      return {
+        msg: 'welcome to your weChat!'
+      }
+    }
+  }
+</script>
