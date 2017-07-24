@@ -1,45 +1,52 @@
 <template>
   <div class="hello">
-    <div class="one">
-      <span class="fl">{{msg}}</span>
-      <span class="fr">+</span>
-      <span class="fr">@</span>
-    </div>
+    <!--<div class="one">-->
+      <!--<span class="fl">{{msg}}</span>-->
+      <!--<span class="fr">+</span>-->
+      <!--<span class="fr">@</span>-->
+    <!--</div>-->
+
+    <head-component class="one"></head-component>
 
     <div class="two">
-      <div>{{ $route.params.id }}</div>
-      <el-button>默认按钮</el-button>
-      <el-button type="primary" @click="visible = true">主要按钮</el-button>
-      <el-button type="text">文字按钮</el-button>
-      <el-dialog v-model="visible" title="Hello world">
-        <p>欢迎使用 Element</p>
-      </el-dialog>
+      <!--<div>{{ $route.params.id }}</div>-->
+      <!--<el-button>默认按钮</el-button>-->
+      <!--<el-button type="primary" @click="visible = true">主要按钮</el-button>-->
+      <!--<el-button type="text">文字按钮</el-button>-->
+      <!--<el-dialog v-model="visible" title="Hello world">-->
+        <!--<p>欢迎使用 Element</p>-->
+      <!--</el-dialog>-->
+
+      <!--<my-component></my-component>-->
       <!--<router-view class="view one" ></router-view>-->
       <router-view class="view two"></router-view>
       <!--<router-view class="view three" name="three"></router-view>-->
     </div>
 
-    <my-component></my-component>
-
-    <ul class="three">
-      <router-link to="/weixin" tag="li">微信</router-link>
-      <router-link to="/tongxun" tag="li">通讯录</router-link>
-      <router-link to="/faxian" tag="li">发现</router-link>
-      <router-link to="/me" tag="li">我</router-link>
-    </ul>
+    <!--<ul class="three">-->
+      <!--<router-link to="/weixin" tag="li">微信</router-link>-->
+      <!--<router-link to="/tongxun" tag="li">通讯录</router-link>-->
+      <!--<router-link to="/faxian" tag="li">发现</router-link>-->
+      <!--<router-link to="/me" tag="li">我</router-link>-->
+    <!--</ul>-->
+    <foot-component class="three"></foot-component>
 
   </div>
 </template>
 
 <script>
+  import myComponent from '@/components/test.vue'
+  import headComponent from '@/components/one.vue'
+  import footComponent from '@/components/three.vue'
 export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'wechat',
-      visible: false
-    }
-  }
+    name: 'hello',
+    data () {
+      return {
+        msg: 'wechat',
+        visible: false
+      }
+    },
+    components: {myComponent, headComponent, footComponent}
 }
 </script>
 

@@ -1,14 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import Foo from '@/components/Foo'
 
-import User from '@/components/user'
-// import One from '@/components/one'
-// import Two from '@/components/two'
-// import Three from '@/components/three'
-
-import Wechat from '@/components/Wechat'
+const Hello = resolve => require(['@/components/Hello'], resolve)
+const Foo = resolve => require(['@/components/Foo'], resolve)
+const Wechat = resolve => require(['@/components/Wechat'], resolve)
 
 Vue.use(Router)
 
@@ -21,7 +16,7 @@ export default new Router({
       component: Hello,
       children: [{
         path: '/:id',
-        component: User
+        component: Wechat
       }]
     },
     {
