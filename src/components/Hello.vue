@@ -1,6 +1,14 @@
 <template>
   <div class="hello">
-    <head-component class="one"></head-component>
+    <head-component class="one">
+      <span>wechat</span>
+    </head-component>
+    <content-component>
+      <!--<span>微信</span>-->
+      <!--<span>通讯录</span>-->
+      <!--<span>发现</span>-->
+      <!--<span>我</span>-->
+    </content-component>
 
     <transition name="slide-fade">
       <router-view class="view two"></router-view>
@@ -14,6 +22,7 @@
 <script>
   import headComponent from '@/components/one.vue'
   import footComponent from '@/components/three.vue'
+  import contentComponent from '@/components/content.vue'
 export default {
     name: 'hello',
     data () {
@@ -22,7 +31,7 @@ export default {
         visible: false
       }
     },
-    components: {headComponent, footComponent}
+    components: {headComponent, footComponent, contentComponent}
 }
 </script>
 

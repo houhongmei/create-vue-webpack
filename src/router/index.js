@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 const Hello = resolve => require(['@/components/Hello'], resolve)
 const Wechat = resolve => require(['@/components/Wechat'], resolve)
-// const Test = resolve => require(['@/components/test'], resolve)
 const Tongxun = resolve => require(['@/components/tongxun'], resolve)
 const Faxian = resolve => require(['@/components/faxian'], resolve)
 const Me = resolve => require(['@/components/me'], resolve)

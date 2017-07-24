@@ -1,8 +1,13 @@
 <template>
   <div>
     <span class="fl">{{msg}}</span>
+
+    <slot></slot>
+    <!--单个分发内容-->
+
     <span class="fr" style="font-size: 30px;">+</span>
     <span class="fr el-icon-search"></span>
+
   </div>
 
 </template>
