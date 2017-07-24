@@ -2,11 +2,9 @@
   <div class="hello">
     <head-component class="one"></head-component>
 
-    <!--<my-component class="two"></my-component>-->
     <transition name="slide-fade">
       <router-view class="view two"></router-view>
     </transition>
-
 
     <foot-component class="three"></foot-component>
 
@@ -14,7 +12,6 @@
 </template>
 
 <script>
-  import myComponent from '@/components/test.vue'
   import headComponent from '@/components/one.vue'
   import footComponent from '@/components/three.vue'
 export default {
@@ -25,7 +22,7 @@ export default {
         visible: false
       }
     },
-    components: {myComponent, headComponent, footComponent}
+    components: {headComponent, footComponent}
 }
 </script>
 
