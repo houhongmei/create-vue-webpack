@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="item in items"> {{ item }} </li>
+    <router-link v-for="item in items" tag="li" to="/personDetail"> {{ item }} </router-link>
   </ul>
 </template>
 <script>

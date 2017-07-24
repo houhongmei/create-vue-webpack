@@ -1,6 +1,8 @@
 # my-project
 
-> A Vue.js project
+> A Vue.js project <br/>
+这个项目是对vue的学习过程。<br/>
+主要用到的技术包括：vue+webpack+element.ui
 
 ## Build Setup
 

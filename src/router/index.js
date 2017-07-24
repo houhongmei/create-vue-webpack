@@ -7,6 +7,7 @@ const Wechat = resolve => require(['@/components/Wechat'], resolve)
 const Tongxun = resolve => require(['@/components/tongxun'], resolve)
 const Faxian = resolve => require(['@/components/faxian'], resolve)
 const Me = resolve => require(['@/components/me'], resolve)
+const PersonDetail = resolve => require(['@/components/personDetail'], resolve)
 
 Vue.use(Router)
 
@@ -33,6 +34,10 @@ export default new Router({
         path: '/me',
         component: Me
       }]
+    },
+    {
+      path: '/personDetail',
+      component: PersonDetail
     }
   ]
 })
