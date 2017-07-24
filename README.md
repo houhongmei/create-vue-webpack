@@ -1,8 +1,8 @@
 # my-project
 
 > A Vue.js project <br/>
-这个项目是对vue的学习过程。<br/>
-主要用到的技术包括：vue+webpack+element.ui
+这个例子是对vue的学习过程，仿微信主页。<br/>
+主要用到的技术包括：vue+webpack+element.ui等
 
 ## Build Setup
 
@@ -29,7 +29,7 @@ npm run e2e
 npm test
 ```
 ## 项目搭建
-
+  vue+webpack项目的搭建参考：https://github.com/ChanphyChin/summarize-for-vue/blob/master/vue%E8%AF%B4%E6%98%8E.md
 ## 路由配置
 
 ## 引入element.ui
