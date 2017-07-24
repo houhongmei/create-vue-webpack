@@ -1,8 +1,8 @@
 <template>
   <div>
     <span class="fl">{{msg}}</span>
-    <span class="fr">+</span>
-    <span class="fr">@</span>
+    <span class="fr" style="font-size: 30px;">+</span>
+    <span class="fr el-icon-search"></span>
   </div>
 
 </template>

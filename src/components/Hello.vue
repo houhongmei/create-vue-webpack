@@ -3,7 +3,10 @@
     <head-component class="one"></head-component>
 
     <!--<my-component class="two"></my-component>-->
-    <router-view class="view two"></router-view>
+    <transition name="slide-fade">
+      <router-view class="view two"></router-view>
+    </transition>
+
 
     <foot-component class="three"></foot-component>
 
