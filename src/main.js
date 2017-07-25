@@ -9,7 +9,11 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import 'element-ui/lib/index.js'
 
+// 引入vue-resource
+import VueResource from 'vue-resource'
+
 Vue.use(ElementUI)
+Vue.use(VueResource)
 
 Vue.config.productionTip = false
 
@@ -21,5 +25,10 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  data () {
+    return {
+      apiUrl: 'http://localhost/api{/id}'
+    }
+  }
 })

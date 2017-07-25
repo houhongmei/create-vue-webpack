@@ -6,6 +6,7 @@
       <span class="fl">{{ item.name }}</span>
       <span class="fr" style="font-size: 10px">{{ item.time }}</span>
     </li>
+    <li @click="deleteEvent">delete</li>
   </ul>
 </template>
 <script>
@@ -26,6 +27,15 @@
     methods: {
       clickEvent: function (i) {
         alert(i)
+        this.$http.get('api/!org/user/~query/Q_USER_MODPWD').then((response) => {
+          console.log(response)
+//          console.log(this.$resource)
+        }, (response) => {
+          console.log(response.body)
+        })
+      },
+      deleteEvent: function () {
+        console.log(1)
       }
     }
   }
