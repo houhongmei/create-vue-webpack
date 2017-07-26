@@ -9,16 +9,12 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import 'element-ui/lib/index.js'
 
-// 引入vue-resource
-// import VueResource from 'vue-resource'
-
 // 引入axios,处理http
 import axios from 'axios'
 // 改写原型链
 Vue.prototype.$axios = axios
 
 Vue.use(ElementUI)
-// Vue.use(VueResource)
 
 Vue.config.productionTip = false
 
@@ -33,7 +29,7 @@ new Vue({
   components: { App },
   data () {
     return {
-      apiUrl: 'http://localhost/api{/id}'
+      // apiUrl: 'http://localhost/api{/id}'
     }
   }
 })

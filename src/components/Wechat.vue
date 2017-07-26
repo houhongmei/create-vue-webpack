@@ -28,12 +28,6 @@
     methods: {
       clickEvent: function (i) {
         alert(i)
-//        this.$http.get('api/!org/user/~query/Q_USER_MODPWD').then((response) => {
-//          console.log(response)
-//          console.log(this.$resource)
-//        }, (response) => {
-//          console.log(response.body)
-//        })
         this.$axios.get('api/!org/user/~query/Q_USER_MODPWD').then((response) => {
           console.log(response)
         }).catch((err) => {
